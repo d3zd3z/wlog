@@ -1,0 +1,26 @@
+<h1>Listing line_pas</h1>
+
+<table>
+  <tr>
+    <th>Day</th>
+    <th>Cals</th>
+    <th>Kind</th>
+    <th>Time</th>
+  </tr>
+
+<% @line_pas.each do |line_pa| %>
+  <tr>
+    <td><%=h line_pa.day_id %></td>
+    <td><%=h line_pa.cals %></td>
+    <td><%=h line_pa.kind %></td>
+    <td><%=h line_pa.time %></td>
+    <td><%= link_to 'Show', line_pa %></td>
+    <td><%= link_to 'Edit', edit_line_pa_path(line_pa) %></td>
+    <td><%= link_to 'Destroy', line_pa, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New line_pa', new_line_pa_path %>

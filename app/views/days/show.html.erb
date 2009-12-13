@@ -1,0 +1,13 @@
+<p>
+  <b>Week:</b>
+  <%=h @day.week_id %>
+</p>
+
+<p>
+  <b>Day:</b>
+  <%=h @day.day %>
+</p>
+
+
+<%= link_to 'Edit', edit_day_path(@day) %> |
+<%= link_to 'Back', days_path %>

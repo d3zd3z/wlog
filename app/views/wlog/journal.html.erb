@@ -1,0 +1,28 @@
+<h1><%=h @week.user.name %>'s Journal</h1>
+<% for day in @week.days %>
+  <h2><%=h day.day %></h2>
+  <h3>Food</h3>
+  <table class="journal-eats">
+    <% for le in day.line_eats %>
+      <tr>
+        <td><%= le.time.strftime('%H:%M') %></td>
+        <td><%= format('%.1f', le.count) %></td>
+        <td><%= le.food.category %></td>
+        <td><%= le.food.name %></td>
+      </tr>
+    <% end %>
+  </table>
+  <% pas = day.line_pas %>
+  <% unless pas.empty? %>
+    <h3>Physical Activity</h3>
+    <table class="journal-pa">
+      <% for pa in pas %>
+        <tr>
+          <td><%= pa.time.strftime('%H:%M') %></td>
+          <td><%= format('%.1f', pa.calories) %></td>
+          <td><%= pa.kind %></td>
+        </tr>
+      <% end %>
+    </table>
+  <% end %>
+<% end %>

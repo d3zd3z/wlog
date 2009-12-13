@@ -1,0 +1,28 @@
+<h1>Editing line_eat</h1>
+
+<% form_for(@line_eat) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :day_id %><br />
+    <%= f.text_field :day_id %>
+  </p>
+  <p>
+    <%= f.label :food_id %><br />
+    <%= f.text_field :food_id %>
+  </p>
+  <p>
+    <%= f.label :count %><br />
+    <%= f.text_field :count %>
+  </p>
+  <p>
+    <%= f.label :time %><br />
+    <%= f.datetime_select :time %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @line_eat %> |
+<%= link_to 'Back', line_eats_path %>

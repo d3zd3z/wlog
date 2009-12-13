@@ -1,4 +1,16 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :line_pas
+
+  map.resources :line_eats
+
+  map.resources :foods
+
+  map.resources :days
+
+  map.resources :weeks
+
+  map.resources :users
+
   # The priority is based upon order of creation: first created -> highest priority.
 
   # Sample of regular route:

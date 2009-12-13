@@ -1,0 +1,13 @@
+<p>
+  <b>User:</b>
+  <%=h @week.user_id %>
+</p>
+
+<p>
+  <b>Start:</b>
+  <%=h @week.start %>
+</p>
+
+
+<%= link_to 'Edit', edit_week_path(@week) %> |
+<%= link_to 'Back', weeks_path %>

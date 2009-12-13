@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  day_id: 1
+  food_id: 1
+  count: 1.5
+  time: 2009-12-12 18:08:40
+
+two:
+  day_id: 1
+  food_id: 1
+  count: 1.5
+  time: 2009-12-12 18:08:40

@@ -1,0 +1,22 @@
+<h1>Listing days</h1>
+
+<table>
+  <tr>
+    <th>Week</th>
+    <th>Day</th>
+  </tr>
+
+<% @days.each do |day| %>
+  <tr>
+    <td><%=h day.week_id %></td>
+    <td><%=h day.day %></td>
+    <td><%= link_to 'Show', day %></td>
+    <td><%= link_to 'Edit', edit_day_path(day) %></td>
+    <td><%= link_to 'Destroy', day, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New day', new_day_path %>

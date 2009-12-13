@@ -1,0 +1,42 @@
+<h1><%= @week.user.name %><br />
+  <%= @start %> through <%= @ending %></h1>
+<table class="weekly">
+  <tr>
+    <th>Day</th>
+    <th>Date</th>
+    <% for c in @categories %>
+      <th><%= c%></th>
+    <% end %>
+  </tr>
+
+  <% for day in @days %>
+    <tr>
+      <td><%=h day[:day].strftime('%a') %></td>
+      <td><%=h day[:day].strftime('%m-%d') %></td>
+      <% for c in @categories %>
+        <td><%=format(@formats[c], day[c]) %></td>
+      <% end %>
+    </tr>
+  <% end %>
+
+  <!-- TODO: Don't duplicate this -->
+  <tr>
+    <th>Day</th>
+    <th>Date</th>
+    <% for c in @categories %>
+      <th><%= c%></th>
+    <% end %>
+  </tr>
+
+  <tr>
+    <td></td>
+    <td>Totals</td>
+      <% for c in @categories %>
+        <td><%=format(@formats[c], @totals[c]) %></td>
+      <% end %>
+  </tr>
+</table>
+
+<div class="nav">
+  <%= link_to '&larr; Back to index', :action => :index %>
+</div>

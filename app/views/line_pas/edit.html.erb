@@ -1,0 +1,28 @@
+<h1>Editing line_pa</h1>
+
+<% form_for(@line_pa) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :day_id %><br />
+    <%= f.text_field :day_id %>
+  </p>
+  <p>
+    <%= f.label :cals %><br />
+    <%= f.text_field :cals %>
+  </p>
+  <p>
+    <%= f.label :kind %><br />
+    <%= f.text_field :kind %>
+  </p>
+  <p>
+    <%= f.label :time %><br />
+    <%= f.datetime_select :time %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @line_pa %> |
+<%= link_to 'Back', line_pas_path %>

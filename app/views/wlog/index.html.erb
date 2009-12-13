@@ -1,0 +1,9 @@
+<h1>Possible weekly journals</h1>
+<ul>
+  <% for week in @weeks do %>
+    <li>
+    <%= link_to week.start.to_s, :id => week.id, :action => :weekly %>
+    (<%= link_to 'Journal', :id => week.id, :action => :journal %>)
+    </li>
+  <% end %>
+</ul>

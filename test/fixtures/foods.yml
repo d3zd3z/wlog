@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  category: MyString
+  name: MyString
+  calories: 1.5
+
+two:
+  category: MyString
+  name: MyString
+  calories: 1.5

@@ -1,0 +1,16 @@
+table.weekly {
+  border: 1px solid #a0a0a0;
+  border-collapse: collapse;
+}
+table.weekly td {
+  text-align: right;
+}
+table.weekly th {
+  background: #e5eecc;
+}
+table.weekly td, th {
+  border: 1px solid #a0a0a0;
+}
+h1 {
+  font-size: 150%;
+}

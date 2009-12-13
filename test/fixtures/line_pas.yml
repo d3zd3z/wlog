@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  day_id: 1
+  cals: 1.5
+  kind: MyString
+  time: 2009-12-12 18:09:28
+
+two:
+  day_id: 1
+  cals: 1.5
+  kind: MyString
+  time: 2009-12-12 18:09:28

@@ -1,0 +1,2 @@
+module LinePasHelper
+end

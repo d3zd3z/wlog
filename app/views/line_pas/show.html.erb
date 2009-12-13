@@ -1,0 +1,23 @@
+<p>
+  <b>Day:</b>
+  <%=h @line_pa.day_id %>
+</p>
+
+<p>
+  <b>Cals:</b>
+  <%=h @line_pa.cals %>
+</p>
+
+<p>
+  <b>Kind:</b>
+  <%=h @line_pa.kind %>
+</p>
+
+<p>
+  <b>Time:</b>
+  <%=h @line_pa.time %>
+</p>
+
+
+<%= link_to 'Edit', edit_line_pa_path(@line_pa) %> |
+<%= link_to 'Back', line_pas_path %>

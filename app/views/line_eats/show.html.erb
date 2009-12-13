@@ -1,0 +1,23 @@
+<p>
+  <b>Day:</b>
+  <%=h @line_eat.day_id %>
+</p>
+
+<p>
+  <b>Food:</b>
+  <%=h @line_eat.food_id %>
+</p>
+
+<p>
+  <b>Count:</b>
+  <%=h @line_eat.count %>
+</p>
+
+<p>
+  <b>Time:</b>
+  <%=h @line_eat.time %>
+</p>
+
+
+<%= link_to 'Edit', edit_line_eat_path(@line_eat) %> |
+<%= link_to 'Back', line_eats_path %>

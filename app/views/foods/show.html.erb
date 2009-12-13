@@ -1,0 +1,18 @@
+<p>
+  <b>Category:</b>
+  <%=h @food.category %>
+</p>
+
+<p>
+  <b>Name:</b>
+  <%=h @food.name %>
+</p>
+
+<p>
+  <b>Calories:</b>
+  <%=h @food.calories %>
+</p>
+
+
+<%= link_to 'Edit', edit_food_path(@food) %> |
+<%= link_to 'Back', foods_path %>
