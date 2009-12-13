@@ -14,6 +14,16 @@
   <div id="columns">
     <div id="side">
       <%= link_to "Index", :controller => 'wlog', :action => 'index' %><br />
+      <br />
+      <% if session[:user_id] %>
+	<%= link_to "Logout", :controller => 'wlog', :action => 'logout' %><br />
+      <% else %>
+	<%= link_to "Login", :controller => 'wlog', :action => 'login' %><br />
+      <% end %>
+      <br />
+      <% if @user %>
+	Logged in as <%=h @user.name %><br />
+      <% end %>
     </div>
     <div id="main">
       <% if flash[:notice] -%>

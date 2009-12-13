@@ -1,15 +1,15 @@
 table.weekly {
-  border: 1px solid #a0a0a0;
+  border: 1px solid #aaa;
   border-collapse: collapse;
 }
 table.weekly td {
   text-align: right;
 }
 table.weekly th {
-  background: #e5eecc;
+  background: #fd9;
 }
 table.weekly td, th {
-  border: 1px solid #a0a0a0;
+  border: 1px solid #aaa;
 }
 h1 {
   font-size: 150%;
@@ -17,17 +17,17 @@ h1 {
 
 /* Main layout */
 #banner {
-  background: #9c9;
+  background: #036;
   padding-top: 10px;
   padding-bottom: 10px;
-  border-bottom: 2px solid;
+  border-bottom: 2px solid #024;
   font: small-caps 40px/40px "Times New Roman", serif;
-  color: #282;
+  color: #9cf;
   text-align: center;
 }
 
 #columns {
-  background: #141;
+  background: #369;
 }
 
 #main {
@@ -43,10 +43,44 @@ h1 {
   padding-left: 1em;
   padding-bottom: 1em;
   width: 12em;
-  background: #141;
+  background: #369;
+  color: #9cf;
 }
 
 #side a {
   color: #bfb;
   font-size: small;
+}
+
+/* Forms */
+.wlog-form fieldset {
+  background: #9cf;
+}
+
+.wlog-form legend {
+  color: #9cf;
+  background: #036;
+  font-family: sans-serif;
+  padding: 0.2em 1em;
+}
+
+.wlog-form label {
+  width: 6em;
+  float: left;
+  text-align: right;
+  padding-top: 0.2em;
+  margin-right: 0.1em;
+  display: block;
+}
+
+.wlog-form select, .wlog-form textarea, .wlog-form input {
+  margin-left: 0.5em;
+}
+
+.wlog-form submit {
+  margin-left: 4em;
+}
+
+.wlog-form div {
+  margin: 0.5em 0;
 }

@@ -2,7 +2,7 @@ class WlogController < ApplicationController
 
   def index
     find_user
-    @weeks = Week.find_all_by_user_id(@user.id, :order => 'start DESC')
+    @weeks = Week.find_all_by_user_id(@show_user.id, :order => 'start DESC')
   end
 
   # Show the weekly summary sheet.
@@ -58,11 +58,31 @@ class WlogController < ApplicationController
     @week = Week.find(params[:id])
   end
 
+  def login
+    if request.post?
+      user = User.authenticate(params[:name], params[:password])
+      if user
+        session[:user_id] = user.id
+        redirect_to :action => 'index'
+      else
+        flash.now[:notice] = "Invalid user/password combination"
+      end
+    end
+  end
+
+  def logout
+    session[:user_id] = nil
+    redirect_to :action => 'index'
+  end
+
   private
   def find_user
-    @user = User.find_by_login('davidb')
-    # TODO: Redirect to an error page.
-    raise 'Unknown user' unless @user
+    if session[:user_id]
+      @user = User.find(session[:user_id])
+      @show_user = @user
+    else
+      @show_user = User.find_by_login('davidb')
+    end
   end
 
 end
