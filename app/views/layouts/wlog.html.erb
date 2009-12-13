@@ -4,14 +4,23 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
   <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
-  <title>Weeks: <%= controller.action_name %></title>
+  <title>WebWeight</title>
   <%= stylesheet_link_tag 'wlog' %>
 </head>
-<body>
-
-<p style="color: green"><%= flash[:notice] %></p>
-
-<%= yield %>
-
+<body id="wlog">
+  <div id="banner">
+    <%= @page_title || "WebWeight" %>
+  </div>
+  <div id="columns">
+    <div id="side">
+      <%= link_to "Index", :controller => 'wlog', :action => 'index' %><br />
+    </div>
+    <div id="main">
+      <% if flash[:notice] -%>
+	<div id="notice"><%= flash[:notice] %></div>
+      <% end %>
+      <%= yield :layout %>
+    </div>
+  </div>
 </body>
 </html>
