@@ -40,6 +40,8 @@ class WlogController < ApplicationController
       end
       for pa in day.line_pas
         net_calories -= pa.calories
+        info['PA'] += pa.calories
+        @totals['PA'] += pa.calories
       end
       info['Total Cals'] = calories
       info['Net Cals'] = net_calories
