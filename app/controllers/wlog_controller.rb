@@ -1,7 +1,8 @@
 class WlogController < ApplicationController
 
+  before_filter :find_user, :except => :login
+
   def index
-    find_user
     @weeks = Week.find_all_by_user_id(@show_user.id, :order => 'start DESC')
   end
 

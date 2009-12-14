@@ -23,6 +23,8 @@
       <br />
       <% if @user %>
 	Logged in as <%=h @user.name %><br />
+      <% elsif @show_user %>
+	Data for <%=h @show_user.name %></br />
       <% end %>
     </div>
     <div id="main">
