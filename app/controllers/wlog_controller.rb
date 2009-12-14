@@ -20,6 +20,7 @@ class WlogController < ApplicationController
       @totals[c] = 0.0
       @formats[c] = "%.0f"
     end
+    @totals['P'] = 0.0
     @formats['Daily Weight'] = "%.2f"
     @formats['Total Weight'] = "%.2f"
     @start = @week.days.first.day.strftime('%a %b %d')
@@ -29,6 +30,7 @@ class WlogController < ApplicationController
       @days << info
       info[:day] = day.day
       @categories.each { |c| info[c] = 0.0 }
+      info['P'] = 0.0
       calories = 0.0
       net_calories = 0.0
       for le in day.line_eats

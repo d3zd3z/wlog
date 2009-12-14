@@ -32,6 +32,12 @@ class Reader
         next
       end
 
+      # Counted things.
+      if line =~ /^\s+(\d\d:\d\d) (F|V|P) ([\d\.]+) (.*)/
+        add_eat($1, $2, $4, $3)
+        next
+      end
+
       # Cereal, a special case.
       if line =~ /^\s+(\d\d:\d\d) C/
         add_eat($1, 'C', 'cereal', 1.0)
@@ -45,8 +51,6 @@ class Reader
                       :kind => $3, :time => $1)
         next
       end
-
-      # TODO: Counted things.
 
       raise "Unsupported line: #{line}"
     end
@@ -73,7 +77,7 @@ class Reader
     food = Food.find_by_category_and_name(category, name)
     raise "Unknown food type: #{category}, #{name}" unless food
     LineEat.create(:day_id => @day.id, :food => food,
-                   :count => 1.0, :time => time)
+                   :count => count, :time => time)
   end
 end
 
