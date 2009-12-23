@@ -1,0 +1,74 @@
+table.weekly {
+  border: 1px solid #aaa;
+  border-collapse: collapse;
+}
+table.weekly td {
+  text-align: right;
+}
+table.weekly th {
+  background: #fd9;
+}
+table.weekly td, th {
+  border: 1px solid #aaa;
+}
+h1 {
+  font-size: 150%;
+}
+
+/* Main layout */
+#banner {
+  display: none;
+}
+
+#columns {
+  background: #369;
+}
+
+#main {
+  /* margin-left: 13em; */
+  padding-top: 4ex;
+  padding-left: 2em;
+  background: white;
+}
+
+#side {
+  display: none;
+}
+
+#side a {
+  color: #bfb;
+  font-size: small;
+}
+
+/* Forms */
+.wlog-form fieldset {
+  background: #9cf;
+}
+
+.wlog-form legend {
+  color: #9cf;
+  background: #036;
+  font-family: sans-serif;
+  padding: 0.2em 1em;
+}
+
+.wlog-form label {
+  width: 6em;
+  float: left;
+  text-align: right;
+  padding-top: 0.2em;
+  margin-right: 0.1em;
+  display: block;
+}
+
+.wlog-form select, .wlog-form textarea, .wlog-form input {
+  margin-left: 0.5em;
+}
+
+.wlog-form submit {
+  margin-left: 4em;
+}
+
+.wlog-form div {
+  margin: 0.5em 0;
+}
